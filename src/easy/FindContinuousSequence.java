@@ -26,9 +26,9 @@ public class FindContinuousSequence {
             if (delta < 0) {
                 continue;
             }
-            int delta_sqrt = (int) Math.sqrt(delta + 0.5);
-            if ((long) delta_sqrt * delta_sqrt == delta && (delta_sqrt - 1) % 2 == 0) {
-                int y = (-1 + delta_sqrt) / 2; // 另一个解(-1-delta_sqrt)/2必然小于0，不用考虑
+            int deltaSqrt = (int) Math.sqrt(delta + 0.5);
+            if ((long) deltaSqrt * deltaSqrt == delta && (deltaSqrt - 1) % 2 == 0) {
+                int y = (-1 + deltaSqrt) / 2; // 另一个解(-1-deltaSqrt)/2必然小于0，不用考虑
                 if (x < y) {
                     int[] res = new int[y - x + 1];
                     for (int i = x; i <= y; ++i) {
@@ -39,13 +39,5 @@ public class FindContinuousSequence {
             }
         }
         return vec.toArray(new int[vec.size()][]);
-    }
-
-    public static void main(String[] args) {
-        String str1 = "通话";
-        String str2 = "重地";
-        System.out.println(String.format("str1：%d | str2：%d",  str1.hashCode(),str2.hashCode()));
-        System.out.println(str1.equals(str2));
-
     }
 }
