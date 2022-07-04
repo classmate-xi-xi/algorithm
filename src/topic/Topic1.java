@@ -1,14 +1,16 @@
-package easy;
+package topic;
 
 import java.util.HashMap;
 import java.util.Map;
 
-public class DoubleSum {
-    /**
-     * 给定 nums = [2, 7, 11, 15], target = 9
-     * 因为 nums[0] + nums[1] = 2 + 7 = 9
-     * 所以返回 [0, 1]
-     */
+/**
+ * @author ywx
+ * 两数之和
+ * 给定 nums = [2, 7, 11, 15], target = 9
+ * 因为 nums[0] + nums[1] = 2 + 7 = 9
+ * 所以返回 [0, 1]
+ */
+public class Topic1 {
     public int[] twoSum(int[] nums, int target) {
         int n = nums.length;
         for (int i = 0; i < n; ++i) {
@@ -22,7 +24,7 @@ public class DoubleSum {
     }
 
     /**
-     * 哈希表
+     * 哈希表实现
      * @param nums
      * @param target
      * @return
