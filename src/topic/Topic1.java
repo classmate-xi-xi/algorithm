@@ -23,8 +23,25 @@ public class Topic1 {
         return new int[0];
     }
 
+    //非有序数组 链表不适用双指针！
+    public int[] twoSum11(int[] nums, int target) {
+        int n = nums.length - 1, l = 0;
+        while (l < n) {
+            if (nums[l] + nums[n] == target) {
+                return new int[]{l, n};
+            } else if (nums[l] + nums[n] < target) {
+                l++;
+            } else if (nums[l] + nums[n] > target) {
+                n--;
+            }
+        }
+        return new int[]{-1, -1};
+    }
+
+
     /**
      * 哈希表实现
+     *
      * @param nums
      * @param target
      * @return
