@@ -42,4 +42,21 @@ public class Topic144 {
         preorder(root.left, res);
         preorder(root.right, res);
     }
+
+    /**
+     * 分解问题
+     * @param root
+     * @return
+     */
+    public List<Integer> preorderTraversal1(TreeNode root) {
+        List<Integer> res = new ArrayList<Integer>();
+        if (root == null) {
+            return res;
+        }
+        res.add(root.val);
+        res.addAll(preorderTraversal1(root.left));
+        res.addAll(preorderTraversal1(root.right));
+        return res;
+    }
+
 }

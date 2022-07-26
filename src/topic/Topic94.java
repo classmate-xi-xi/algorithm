@@ -42,4 +42,20 @@ public class Topic94 {
         res.add(root.val);
         inorder(root.right, res);
     }
+
+    /**
+     * 分解问题
+     * @param root
+     * @return
+     */
+    public List<Integer> inorderTraversal1(TreeNode root) {
+        List<Integer> res = new ArrayList<>();
+        if (root == null) {
+            return res;
+        }
+        res.addAll(inorderTraversal1(root.left));
+        res.add(root.val);
+        res.addAll(inorderTraversal1(root.right));
+        return res;
+    }
 }

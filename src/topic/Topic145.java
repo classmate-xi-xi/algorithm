@@ -43,4 +43,20 @@ public class Topic145 {
         res.add(root.val);
     }
 
+    /**
+     * 分解问题
+     * @param root
+     * @return
+     */
+    public List<Integer> postorderTraversal1(TreeNode root) {
+        List<Integer> res = new ArrayList<Integer>();
+        if (root == null) {
+            return res;
+        }
+        res.addAll(postorderTraversal1(root.left));
+        res.addAll(postorderTraversal1(root.right));
+        res.add(root.val);
+        return res;
+    }
+
 }
