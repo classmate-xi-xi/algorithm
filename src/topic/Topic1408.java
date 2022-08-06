@@ -15,8 +15,8 @@ public class Topic1408 {
         List<String> res = new ArrayList<>();
         for (int i = 0; i < words.length; i++) {
             for (int j = 0; j < words.length; j++) {
-                if (i != j && words[i].contains(words[j])) {
-                    res.add(words[j]);
+                if (i != j && words[j].contains(words[i])) {
+                    res.add(words[i]);
                     break;
                 }
             }
