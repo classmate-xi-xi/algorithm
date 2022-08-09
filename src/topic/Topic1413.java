@@ -9,8 +9,8 @@ package topic;
 public class Topic1413 {
     public int minStartValue(int[] nums) {
         int sum = 0, minSum = 0;
-        for (int i = 0; i < nums.length; i++) {
-            sum += nums[i];
+        for (int num : nums) {
+            sum += num;
             minSum = Math.min(sum, minSum);
         }
         return 1 - minSum;
