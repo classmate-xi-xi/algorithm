@@ -1,5 +1,7 @@
 package topic;
 
+import structure.sort.QuickSort;
+
 import java.util.Arrays;
 
 /**
@@ -10,10 +12,15 @@ import java.util.Arrays;
 
 public class Topic1460 {
     public boolean canBeEqual(int[] target, int[] arr) {
-        quickSort(target,0, target.length-1);
-        quickSort(arr,0,arr.length-1);
+        // new QuickSort().quickSort();
+        quickSort(target, 0, target.length - 1);
+        quickSort(arr, 0, arr.length - 1);
         return Arrays.equals(target, arr);
     }
+
+    /**
+     * 快排
+     */
     public void quickSort(int[] nums, int left, int right) {
         int low = left;
         int high = right;
