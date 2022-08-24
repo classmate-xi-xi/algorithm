@@ -4,6 +4,7 @@ package structure.sort;
  * @author: ywx
  * @description 归并排序
  * 先把左半边数组排好序，再把右半边数组排好序，然后把两半数组合并
+ * 归并排序就是二叉树的后序遍历
  * @Date: 2022/08/24
  */
 
