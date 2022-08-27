@@ -57,8 +57,25 @@ public class Topic104 {
         if (root == null) {
             return 0;
         }
-        int leftMax = maxDepth(root.left);
-        int rightMax = maxDepth(root.right);
+        int leftMax = maxDepth1(root.left);
+        int rightMax = maxDepth1(root.right);
         return Math.max(leftMax, rightMax) + 1;
+    }
+
+    public static void main(String[] args) {
+        TreeNode node = new TreeNode(4);
+
+        TreeNode node1 = new TreeNode(4);
+        TreeNode node2 = new TreeNode(4);
+        TreeNode node3 = new TreeNode(4);
+        TreeNode node4 = new TreeNode(4);
+        TreeNode node5 = new TreeNode(4);
+        node.left = node1;
+        node.right = node2;
+        node2.left = node3;
+        node2.right = node4;
+        node1.right = node5;
+        int i = new Topic104().maxDepth1(node);
+        System.out.println(i);
     }
 }
