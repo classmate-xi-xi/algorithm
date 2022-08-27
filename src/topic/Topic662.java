@@ -43,6 +43,7 @@ public class Topic662 {
                 if (leftCode == 0) {
                     leftCode = node.val;
                 }
+                // 对每个节点下的左右节点的左右子节点进行编号
                 if (node.left != null) {
                     queue.offer(new TreeNode(node.val * 2, node.left.left, node.left.right));
                 }
