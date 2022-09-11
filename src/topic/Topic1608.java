@@ -23,7 +23,4 @@ public class Topic1608 {
         return -1;
     }
 
-    public static void main(String[] args) {
-
-    }
 }
