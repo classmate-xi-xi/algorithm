@@ -14,7 +14,7 @@ package topic;
  * @Date: 2022/09/26
  */
 
-public class Topic17_19 {
+public class InterviewQes17_19 {
     public int[] missingTwo(int[] nums) {
         // 原数组长度为 +2
         int totalLength = nums.length + 2;
