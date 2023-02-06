@@ -1,3 +1,5 @@
+package topic;
+
 /**
  * @author: ywx
  * @description  生成每种字符都是奇数个的字符串
